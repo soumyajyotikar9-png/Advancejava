@@ -1,0 +1,384 @@
+/* ============================================
+   STUDENT INFORMATION SYSTEM
+   Modern Professional University Theme
+   ============================================ */
+
+/* 1. Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #17365d;
+    --primary-dark: #102744;
+    --primary-light: #eaf1f8;
+    --accent: #3273b9;
+    --background: #f4f7fb;
+    --white: #ffffff;
+    --text: #263548;
+    --muted: #718096;
+    --border: #dce4ed;
+    --success: #18794e;
+    --success-bg: #eaf7ef;
+    --danger: #b42332;
+    --danger-bg: #fff0f1;
+    --shadow: 0 8px 30px rgba(23, 54, 93, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* 2. Main Container */
+
+.container {
+    width: 92%;
+    max-width: 680px;
+    margin: 65px auto;
+    padding: 38px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.45s ease;
+}
+
+/* 3. Headings */
+
+h1,
+h2,
+h3 {
+    color: var(--primary);
+    line-height: 1.35;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 750;
+    text-align: center;
+    letter-spacing: -0.7px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 650;
+    margin-bottom: 12px;
+}
+
+p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* 4. Forms */
+
+form {
+    width: 100%;
+    margin-top: 22px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 18px 0 7px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    background: #fbfcfe;
+    border: 1px solid #d5deea;
+    border-radius: 7px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a0aaba;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: var(--white);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(50, 115, 185, 0.12);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    background: #edf1f5;
+    cursor: not-allowed;
+}
+
+/* 5. Buttons */
+
+button,
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 24px;
+    background: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--primary);
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(16, 39, 68, 0.15);
+    transform: translateY(-1px);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0);
+}
+
+/* 6. Home Page Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.buttons .btn {
+    min-width: 185px;
+    margin-top: 5px;
+    padding: 13px 20px;
+}
+
+.buttons .btn:last-child {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.buttons .btn:last-child:hover {
+    background: var(--primary-light);
+}
+
+/* 7. Links */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.container > a {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 8. Student Details Table */
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+th {
+    width: 38%;
+    color: var(--primary);
+    background: var(--primary-light);
+    font-weight: 650;
+}
+
+td {
+    color: #435166;
+    background: var(--white);
+}
+
+tr:last-child th,
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #f8fafd;
+}
+
+/* 9. Success and Error Messages */
+
+.success-message {
+    padding: 18px;
+    margin: 22px 0;
+    color: var(--success);
+    background: var(--success-bg);
+    border: 1px solid #b8e2c7;
+    border-left: 5px solid var(--success);
+    border-radius: 7px;
+    text-align: center;
+}
+
+.success-message h3 {
+    color: var(--success);
+    margin-bottom: 0;
+}
+
+.error-message {
+    padding: 18px;
+    margin: 22px 0;
+    color: var(--danger);
+    background: var(--danger-bg);
+    border: 1px solid #f3c4c8;
+    border-left: 5px solid var(--danger);
+    border-radius: 7px;
+    text-align: center;
+}
+
+/* 10. Dividers */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 26px 0;
+}
+
+/* 11. Keyboard Accessibility */
+
+button:focus-visible,
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(50, 115, 185, 0.45);
+    outline-offset: 3px;
+}
+
+/* 12. Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 13. Responsive Design */
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        width: 92%;
+        margin: 28px auto;
+        padding: 25px 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* 14. Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
