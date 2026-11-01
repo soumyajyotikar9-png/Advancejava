@@ -1,0 +1,513 @@
+/* =========================
+   GENERAL PAGE
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+/* =========================
+   COMMON CONTAINER
+========================= */
+
+.container {
+    width: 500px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   LOGIN / REGISTRATION FORM
+========================= */
+
+form {
+    width: 400px;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+
+/* Labels */
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+
+/* Input boxes and select */
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form select {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+/* Input focus */
+
+form input:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+/* =========================
+   LOGIN / REGISTER BUTTON
+========================= */
+
+input[type="submit"],
+.login-button {
+    display: block;
+    width: 150px;
+    margin: 20px auto 10px;
+    padding: 12px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+input[type="submit"]:hover,
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* =========================
+   CLEAR / RESET BUTTON
+========================= */
+
+input[type="reset"] {
+    display: block;
+    width: 150px;
+    margin: 10px auto;
+    padding: 12px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+input[type="reset"]:hover {
+    background-color: #545b62;
+}
+
+
+/* =========================
+   NORMAL LINKS
+========================= */
+
+a {
+    color: #007bff;
+}
+
+
+a:hover {
+    color: #0056b3;
+}
+
+
+/* =========================
+   REGISTRATION SUCCESS
+========================= */
+
+.success-container {
+    width: 550px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+
+.success-container h2 {
+    color: #28a745;
+}
+
+
+/* Registered details */
+
+.details {
+    margin-top: 20px;
+}
+
+
+.details p {
+    font-size: 17px;
+    padding: 12px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.details span {
+    display: inline-block;
+    width: 130px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* =========================
+   GO TO LOGIN BUTTON
+========================= */
+
+.login-link {
+    display: block;
+    width: 160px;
+    margin: 30px auto 0;
+    padding: 12px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+
+.login-link:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-container {
+    width: 550px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+
+.profile-container h1 {
+    color: #28a745;
+}
+
+
+/* Profile rows */
+
+.profile-details {
+    margin-top: 25px;
+}
+
+
+.profile-row {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+}
+
+
+.profile-label {
+    display: inline-block;
+    width: 130px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout {
+    display: block;
+    width: 130px;
+    margin: 30px auto 0;
+    padding: 12px;
+    text-align: center;
+    background-color: #d9534f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+
+.logout:hover {
+    background-color: #c9302c;
+    color: white;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error {
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container,
+    .success-container,
+    .profile-container {
+        width: 90%;
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .details span,
+    .profile-label {
+        width: 110px;
+    }
+}
+/* =========================
+   REGISTRATION PAGE
+========================= */
+
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+
+/* Registration Box */
+
+.register-box {
+    width: 520px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+
+/* Heading */
+
+.register-box h1 {
+    text-align: center;
+    margin: 0;
+    color: #333;
+    font-size: 30px;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+
+/* Form group */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+/* Labels */
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+
+/* Input and Select */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+
+/* Input focus */
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+
+/* Buttons */
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+
+/* Register button */
+
+.register-button {
+    flex: 1;
+    padding: 13px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.register-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Clear button */
+
+.clear-button {
+    width: 120px;
+    padding: 13px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.clear-button:hover {
+    background-color: #545b62;
+}
+
+
+/* Login text */
+
+.login-text {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 15px;
+}
+
+
+.login-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE REGISTRATION
+========================= */
+
+@media (max-width: 600px) {
+
+    .register-container {
+        padding: 20px;
+    }
+
+    .register-box {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .register-box h1 {
+        font-size: 25px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .clear-button {
+        width: 100%;
+    }
+}
